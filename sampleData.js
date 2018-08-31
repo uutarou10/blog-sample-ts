@@ -16,7 +16,7 @@ module.exports = () => {
       const id = ++lastComentsId;
       data.comments.push({
         id,
-        article_id: i + 1,
+        post_id: i + 1,
         body: faker.lorem.text(),
         name: faker.name.findName(),
         created_at: new Date() 
