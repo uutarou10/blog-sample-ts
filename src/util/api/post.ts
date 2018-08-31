@@ -1,6 +1,6 @@
+import postFactory from './factory/postFactory';
 import { client } from './index';
 import PostResponse from './types/postResponse';
-import postFactory from './factory/postFactory';
 
 export default {
   getAll: async () => {

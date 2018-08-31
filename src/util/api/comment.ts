@@ -1,6 +1,6 @@
 import { client } from '.';
-import CommentResponse from './types/commentResponse';
 import commentFactory from './factory/commentFactory';
+import CommentResponse from './types/commentResponse';
 
 export default {
   getAll: async () => {

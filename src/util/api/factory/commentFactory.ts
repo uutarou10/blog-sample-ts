@@ -1,5 +1,5 @@
-import CommentResponse from "../types/commentResponse";
 import Comment from "../../../model/comment";
+import CommentResponse from "../types/commentResponse";
 
 export default (data: CommentResponse) => {
   return new Comment(

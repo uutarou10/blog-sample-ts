@@ -1,5 +1,5 @@
-import PostResponse from "../types/postResponse";
 import Post from "../../../model/post";
+import PostResponse from "../types/postResponse";
 
 export default (data: PostResponse) => {
   return new Post(

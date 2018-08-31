@@ -3,8 +3,14 @@
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
-      "node_modules/**/*.ts",
-      "coverage/lcov-report/*.js"
+      "node_modules/**/*.ts"
     ]
+  },
+  "rules": {
+    "variable-name": [true, "allow-leading-underscore"],
+    "interface-name": [true, "never-prefix"]
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false
   }
 }
