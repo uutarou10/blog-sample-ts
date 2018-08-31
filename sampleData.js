@@ -29,7 +29,7 @@ module.exports = () => {
       id: i + 1,
       title: faker.lorem.sentence(),
       body: faker.lorem.paragraphs(),
-      comments_id: commentIds,
+      comment_ids: commentIds,
       created_at: faker.date.past() 
     });
   }
