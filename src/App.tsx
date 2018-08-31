@@ -1,9 +1,19 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import './App.css';
-
 import logo from './logo.svg';
+import { fetchPosts } from './module/posts';
 
-class App extends React.Component {
+interface PropTypes {
+  fetchPosts: () => any
+}
+
+class App extends React.Component<PropTypes> {
+  public componentDidMount() {
+    this.props.fetchPosts();
+  }
+
   public render() {
     return (
       <div className="App">
@@ -19,4 +29,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  fetchPosts: () => dispatch(fetchPosts.request())
+});
+
+export default connect(null, mapDispatchToProps)(App);
