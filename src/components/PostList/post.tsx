@@ -9,7 +9,10 @@ const postComponent: React.SFC<PropTypes> = ({ post }) => {
   return (
     <li>
       <p>{post.title}</p>
-      <small>{post.body.replace(/\n/, '').substr(0, 100)} ...</small>
+      <small>
+        Posted at {post.createdAt.toLocaleDateString()} | {post.commentIds.length} comments<br />
+        {post.body.replace(/\n/, '').substr(0, 100)} ...
+      </small>
     </li>
   );
 };
