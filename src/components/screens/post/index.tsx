@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { match } from 'react-router';
 import Post from '../../../model/post';
 import { RootState } from '../../../module';
+import PostComponent from '../../Post';
 
 interface PropTypes {
   match: match<{id: string}>
@@ -17,7 +18,7 @@ const postScreenComponent: React.SFC<PropTypes> = (props) => {
   return (
     <div>
       <div>post id: {id}</div>
-      <div>{post ? post.body : 'sorry. not found.'}</div>
+      <div>{post ? <PostComponent post={post} /> : 'sorry. not found.'}</div>
     </div>
   );
 }
