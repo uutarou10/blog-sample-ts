@@ -3,7 +3,8 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router';
 import { Dispatch } from 'redux';
-import PostList from './components/PostList';
+import indexScreen from './components/screens/index';
+import postScreen from './components/screens/post';
 import { fetchPosts } from './module/posts';
 import { history } from './store';
 
@@ -20,12 +21,8 @@ class App extends React.Component<PropTypes> {
     return (
       <ConnectedRouter history={history}>
         <Switch>
-          <Route exact={true} path='/'>
-            <PostList />
-          </Route>
-          <Route path='/posts/:id'>
-            <div>posts</div>
-          </Route>
+          <Route exact={true} path='/' component={indexScreen} />
+          <Route path='/posts/:id' component={postScreen} />
         </Switch>
       </ConnectedRouter>
     );
